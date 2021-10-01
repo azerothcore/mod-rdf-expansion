@@ -1,25 +1,45 @@
-# SKELETON - Module template
+# mod-rdf-expansion
 
-[English](README.md) | [Español](README_ES.md)
+Allows to join RDF of previous expansions on a higher character level.
+
+Up to character level 58, you can join the "Random Classic Dungeon":
+
+<img alt="RDF at level 58" src="https://user-images.githubusercontent.com/75517/135634608-fd8b52c2-2939-42c9-a848-813d169d19cd.png" width=300>
+
+However, once the character level hits 59, you can no longer join "Random Classic Dungeon" but you can only join "Random Burning Crusade Dungeon":
+
+<img alt="RDF at level 59" src="https://user-images.githubusercontent.com/75517/135634558-64808499-9a45-4d1f-b9fc-a962ab7e63bb.png" width=300>
+
+This is a client limitation. This module allows to hijack the type of RDF according to the configuration.
+
+```
+#
+#     RDF.Expansion
+#        Description: Allow setting which expansion can be used in LFG
+#           2 - WOTLK (Default behaviour)
+#           1 - TBC (if the player queues WOTLK RDF, join as TBC RDF)
+#           0 - Classic  (if the player queues Wotlk or TBC RDF, join as Classic RDF)
+#        Default:     2
+
+RDF.Expansion = 2
+```
 
 
-## How to create your own module
+## Requirements
 
-1. Use the script `create_module.sh` located in [`modules/`](https://github.com/azerothcore/azerothcore-wotlk/tree/master/modules) to start quickly with all the files you need and your git repo configured correctly (heavily recommended).
-1. You can then use these scripts to start your project: https://github.com/azerothcore/azerothcore-boilerplates
-1. Do not hesitate to compare with some of our newer/bigger/famous modules.
-1. Edit the `README.md` and other files (`include.sh` etc...) to fit your module. Note: the README is automatically created from `README_example.md` when you use the script `create_module.sh`.
-1. Publish your module to our [catalogue](https://github.com/azerothcore/modules-catalogue).
+Requires a version of AC with https://github.com/azerothcore/azerothcore-wotlk/pull/8196 or higher
 
 
-## How to test your module?
+## Installation
 
-Disable PCH (precompiled headers) and try to compile. To disable PCH, set `-DNOPCH=1` with Cmake (more info [here](http://www.azerothcore.org/wiki/CMake-options)).
+```
+1) Simply `git clone` the module under the `modules` directory of your AzerothCore source or copy paste it manually.
+2) Re-run cmake and launch a clean build of AzerothCore
+3) Copy mod-rdf-expansion.conf.dist to 
+```
 
-If you forgot some headers, it is time to add them!
+## Credits
 
-## Licensing
-
-The default license of the skeleton-module template is the AGPL but you can use a different license for your own modules.
-
-So modules can also be kept private. However, if you need to add new hooks to the core, as well as improving existing ones, you have to share your improvements because the main core is released under the AGPL license. Please [provide a PR](https://www.azerothcore.org/wiki/How-to-create-a-PR) if that is the case.
+* [Shin](https://github.com/FrancescoBorzi)
+* [Yehonal](https://github.com/Yehonal)
+* AzerothCore: [repository](https://github.com/azerothcore) - [website](http://azerothcore.org/) - [discord chat community](https://discord.gg/PaqQRkd)
