@@ -32,11 +32,11 @@ Requires a version of AC with https://github.com/azerothcore/azerothcore-wotlk/p
 
 ## Installation
 
-```
+
 1) Simply `git clone` the module under the `modules` directory of your AzerothCore source or copy paste it manually.
 2) Re-run cmake and launch a clean build of AzerothCore
-3) Copy mod-rdf-expansion.conf.dist to 
-```
+3) Copy `mod-rdf-expansion.conf.dist` to `mod-rdf-expansion.conf` and edit as you please
+
 
 ## Credits
 
