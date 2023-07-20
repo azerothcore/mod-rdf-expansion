@@ -1,4 +1,12 @@
+# ![logo](https://raw.githubusercontent.com/azerothcore/azerothcore.github.io/master/images/logo-github.png) AzerothCore
+
 # mod-rdf-expansion
+
+### This is a module for [AzerothCore](http://www.azerothcore.org)
+
+- Latest build status with azerothcore:
+
+[![Build Status](https://github.com/azerothcore/mod-rdf-expansion/workflows/core-build/badge.svg?branch=master&event=push)](https://github.com/azerothcore/mod-rdf-expansion)
 
 Allows to join RDF of previous expansions on a higher character level.
 
@@ -24,19 +32,15 @@ This is a client limitation. This module allows to hijack the type of RDF accord
 RDF.Expansion = 2
 ```
 
-
 ## Requirements
 
 Requires a version of AC with https://github.com/azerothcore/azerothcore-wotlk/pull/8196 or higher
 
-
 ## Installation
-
 
 1) Simply `git clone` the module under the `modules` directory of your AzerothCore source or copy paste it manually.
 2) Re-run cmake and launch a clean build of AzerothCore
 3) Copy `mod-rdf-expansion.conf.dist` to `mod-rdf-expansion.conf` and edit as you please
-
 
 ## Credits
 
