@@ -11,7 +11,7 @@ class RdfExpansion : public PlayerScript
 public:
     RdfExpansion() : PlayerScript("RdfExpansion") { }
 
-    void OnQueueRandomDungeon(Player* /* player */, uint32 & rDungeonId) override
+    void OnPlayerQueueRandomDungeon(Player* /* player */, uint32 & rDungeonId) override
     {
         // values from LFGDungeons.dbc
         constexpr const uint32 RDF_CLASSIC = 258;
