@@ -9,7 +9,9 @@
 class RdfExpansion : public PlayerScript
 {
 public:
-    RdfExpansion() : PlayerScript("RdfExpansion") { }
+    RdfExpansion() : PlayerScript("RdfExpansion", {
+        PLAYERHOOK_ON_QUEUE_RANDOM_DUNGEON
+    }) { }
 
     void OnPlayerQueueRandomDungeon(Player* /* player */, uint32 & rDungeonId) override
     {
